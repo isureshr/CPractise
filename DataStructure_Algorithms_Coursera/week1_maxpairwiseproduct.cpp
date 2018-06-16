@@ -3,8 +3,8 @@
 
 using namespace std;
 
-long int MaxProduct(const long int *num, const int n) {
-	long int product = 0; 
+long long MaxProduct(const long long *num, const int n) {
+	long long product = 0; 
 	int index1 = 0, i = 0;
 	for (i = 0; i < n; i++) {
 		if (num[i] > num[index1]) {
@@ -31,12 +31,12 @@ long int MaxProduct(const long int *num, const int n) {
 int main() {
 	int total = 0;
 	cin >> total;
-	long int numbers[total];
+	long long numbers[total];
 	for (int i = 0; i < total;i++) {
 		cin >> numbers[i];
 	}
 	
-	long int product = MaxProduct(numbers, total);
+	long long product = MaxProduct(numbers, total);
 	cout << product;
 	return 1;
 }
